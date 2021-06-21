@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nedra
+    username: postgres
+    password: postgres
+    generate-unique-name: false
+    name: clicker
+  flyway:
+    create-schemas: true
+    baseline-on-migrate: true
+  jpa:
+    database: postgresql
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+      properties:
+        hibernate:
+          temp:
+            use_jdbc_metadata_defaults: false
+server:
+  port: 8080
+  api: /api/v1
